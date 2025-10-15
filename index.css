@@ -1,0 +1,97 @@
+/* ------------------------ */
+/* Custom properties        */
+/* ------------------------ */
+
+:root {
+    --primary: ;
+    --secondary: ;
+    --tertiary: ;
+/*    --accent: ;
+    --danger: ;
+    --success: ;
+    --info: ;
+    --warning: ;
+
+ */
+}
+
+
+
+/* ------------------------ */
+/* Reset                    */
+/* ------------------------ */
+
+/* Box sizing */
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+/* Reset margin */
+body, h1,h2,h3,h4,h5,h6,p, figure, picture {
+    margin: 0;
+}
+
+/* set up the body */
+body {
+    line-height: 1.5;
+    min-height: 100vh;
+}
+
+/* make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* make form elements easier to work with */
+input, button, textarea, select {
+    font: inherit;
+}
+
+/* remove animations for people who've turned them off */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *:before,
+    *:after {
+        animation-duration: 0.1ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* ------------------------ */
+/* Utility classes          */
+/* ------------------------ */
+
+.flex {
+    display: flex;
+    gap: var(--gap, 1rem);
+}
+
+.grid {
+    display: grid;
+    gap: var(--gap, 1rem);
+}
+
+.container {
+    padding-inline: 2em;
+    margin-inline: auto;
+    max-width: 80rem;
+}
+
+/* Screen reader only, this class won't show up on screen but sr-s can read it*/
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
